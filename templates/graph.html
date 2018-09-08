@@ -1,28 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+	<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Demo application for TDI.">
     <meta name="author" content="@nfick">
-    <!-- <link rel="icon" href="favicon.ico"> -->
-
-    <title>Graph a Ticker App</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		
+    <title>Graph of {{ticker}} Data</title>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" media="screen"
      href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
 
-    <!-- Custom CSS for navbar-->
     <style>
     body {
       padding-top: 70px;
     }
     </style>
+
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.13.0.js"></script>
+    
+    {{ script | safe }}
+
   </head>
 
-  <body>
+	<body>
     <!-- navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -37,7 +40,7 @@
         <div class="collapse navbar-collapse" id="nav-1">
           <ul class="nav navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/index.html">Home</a>
             </li>
             <!--<li class="nav-item">
               <a class="nav-link" href="https://github.com/thedataincubator/flask-framework">about</a>
@@ -55,7 +58,7 @@
       <div class="row">
         <div class="col-lg-12 text-left">
           <form id='input' method='post' action='index'>  
-          <p>Ticker symbol: <input type='text' name='ticker' placeholder='LUV' /></p>
+          <p>Ticker symbol: <input type='text' name='ticker' placeholder={{ticker}} /></p>
           <ul>
             <li><input type="checkbox" name='Open' />Opening price</li>
             <li><input type="checkbox" name='Adj. Open' />Adjusted Opening price</li>
@@ -72,7 +75,7 @@
             <li><input type="checkbox" name='Close' />Closing price</li>
             <li><input type="checkbox" name='Adj. Close' />Adjusted Closing price</li>
           </ul>
-              <div id="datetimepicker4" class="input-append">
+          <div id="datetimepicker4" class="input-append">
                 <ul>
                   <li>
                     <input data-format="yyyy-MM-dd" type="text" name="start_date" value={{start}}></input>
@@ -82,7 +85,7 @@
                     </span>
                   </li>
                   <li>
-                    <input data-format="yyyy-MM-dd" type="text" name="end_date" value={{today}}></input>
+                    <input data-format="yyyy-MM-dd" type="text" name="end_date" value={{end}}></input>
                     <span class="add-on">
                       <i data-time-icon="icon-time" data-date-icon="icon-calendar">
                       </i>
@@ -96,16 +99,15 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript">
-      $(function() {
-        $('#datetimepicker4').datetimepicker({
-          pickTime: false
-        });
-      });
-    </script>
+    <!-- graph -->
+		<div class="container">
+      <div class="row">
+		
+		    {{ div | safe }}	
+
+		  </div>
+    </div>
+
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -114,5 +116,5 @@
     <script type="text/javascript"
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
     </script>
-  </body>
+	</body>
 </html>

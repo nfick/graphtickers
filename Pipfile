@@ -12,6 +12,7 @@ flask = "*"
 simplejson = "*"
 gunicorn = "*"
 requests = "*"
+datetime = "*"
 
 [dev-packages]
 

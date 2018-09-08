@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0508cd1dd7ee8e05ec9f9ead65a2858c66f8572b6d8eac2d5259b99f61357e8a"
+            "sha256": "208b2b66193952ece7d2413ef5c46a43b8004ee90dba259c5e891eb3ba352a86"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -43,6 +43,14 @@
                 "sha256:f15516df478d5a56180fbf80e68f206010e6d160fc39fa508b65e035fd75130b"
             ],
             "version": "==6.7"
+        },
+        "datetime": {
+            "hashes": [
+                "sha256:6a7d0650cf9cfc10b0e152fa6c667176cff7cd68b93040c10aca868d4a4617c0",
+                "sha256:b3d91011caff312274a629b35abd6eb67038f8f92423ad3d9e071c0bf8823226"
+            ],
+            "index": "pypi",
+            "version": "==4.2"
         },
         "dill": {
             "hashes": [
@@ -258,6 +266,21 @@
                 "sha256:d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b"
             ],
             "version": "==0.14.1"
+        },
+        "zope.interface": {
+            "hashes": [
+                "sha256:21506674d30c009271fe68a242d330c83b1b9d76d62d03d87e1e9528c61beea6",
+                "sha256:3d184aff0756c44fff7de69eb4cd5b5311b6f452d4de28cb08343b3f21993763",
+                "sha256:467d364b24cb398f76ad5e90398d71b9325eb4232be9e8a50d6a3b3c7a1c8789",
+                "sha256:57c38470d9f57e37afb460c399eb254e7193ac7fb8042bd09bdc001981a9c74c",
+                "sha256:9ada83f4384bbb12dedc152bcdd46a3ac9f5f7720d43ac3ce3e8e8b91d733c10",
+                "sha256:a1daf9c5120f3cc6f2b5fef8e1d2a3fb7bbbb20ed4bfdc25bc8364bc62dcf54b",
+                "sha256:e6b77ae84f2b8502d99a7855fa33334a1eb6159de45626905cb3e454c023f339",
+                "sha256:e881ef610ff48aece2f4ee2af03d2db1a146dc7c705561bd6089b2356f61641f",
+                "sha256:f41037260deaacb875db250021fe883bf536bf6414a4fd25b25059b02e31b120"
+            ],
+            "markers": "python_version != '3.0.*' and python_version != '3.3.*' and python_version != '3.1.*' and python_version != '3.2.*' and python_version >= '2.7'",
+            "version": "==4.5.0"
         }
     },
     "develop": {}
