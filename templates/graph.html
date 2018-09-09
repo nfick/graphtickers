@@ -57,42 +57,44 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
-          <form id='input' method='post' action='index'>  
-          <p>Ticker symbol: <input type='text' name='ticker' placeholder={{ticker}} /></p>
-          <ul>
-            <li><input type="checkbox" name='Open' />Opening price</li>
-            <li><input type="checkbox" name='Adj. Open' />Adjusted Opening price</li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" name='High' />High price</li>
-            <li><input type="checkbox" name='Adj. High' />Adjusted High price</li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" name='Low' />Low price</li>
-            <li><input type="checkbox" name='Adj. Low' />Adjusted Low price</li>
-          </ul>
-          <ul>
-            <li><input type="checkbox" name='Close' />Closing price</li>
-            <li><input type="checkbox" name='Adj. Close' />Adjusted Closing price</li>
-          </ul>
-          <div id="datetimepicker4" class="input-append">
-                <ul>
-                  <li>
+          <form id='input' method='post' action='graph'>  
+          <p>Ticker symbol: <input type='text' name='ticker' value={{ticker}} /></p>
+          <table>
+          <tr>
+            <td><input type="checkbox" name='open' {{form_open}} />Opening price</td>
+            <td><input type="checkbox" name='adj_open' {{adj_open}} />Adjusted Opening price</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name='high' {{high}} />High price</td>
+            <td><input type="checkbox" name='adj_high' {{adj_high}} />Adjusted High price</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name='low' {{low}} />Low price</td>
+            <td><input type="checkbox" name='adj_low' {{adj_low}} />Adjusted Low price</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name='close' {{close}} />Closing price</td>
+            <td><input type="checkbox" name='adj_close' {{adj_close}} />Adjusted Closing price</td>
+          </tr>
+              <div id="datetimepicker4" class="input-append">
+                <tr>
+                  <td>
                     <input data-format="yyyy-MM-dd" type="text" name="start_date" value={{start}}></input>
                     <span class="add-on">
                       <i data-time-icon="icon-time" data-date-icon="icon-calendar">
                       </i>
                     </span>
-                  </li>
-                  <li>
+                  </td>
+                  <td>
                     <input data-format="yyyy-MM-dd" type="text" name="end_date" value={{end}}></input>
                     <span class="add-on">
                       <i data-time-icon="icon-time" data-date-icon="icon-calendar">
                       </i>
                     </span>
-                  </li>
-                </ul>
+                  </td>
+                </tr>
               </div>
+          </table>
           <p><input type="submit" value="Submit"></p>
           </form>
         </div>
