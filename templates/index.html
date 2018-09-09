@@ -10,18 +10,7 @@
     <title>Graph a Ticker App</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen"
-      href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
-
-    <!-- Scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Custom CSS for navbar-->
     <style>
@@ -83,24 +72,14 @@
             <td><input type="checkbox" name='close' />Closing price</td>
             <td><input type="checkbox" name='adj_close' />Adjusted Closing price</td>
           </tr>
-          <div id="datetimepicker4" class="input-append">
-            <tr>
-              <td>
-                <input data-format="yyyy-MM-dd" type="text" name="start_date" value={{start}}></input>
-                <span class="add-on">
-                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                  </i>
-                </span>
-              </td>
-              <td>
-                <input data-format="yyyy-MM-dd" type="text" name="end_date" value={{today}}></input>
-                <span class="add-on">
-                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                  </i>
-                </span>
-              </td>
-            </tr>
-          </div>
+          <tr>
+            <td>
+              <input data-format="yyyy-MM-dd" type="text" name="start_date" value={{start}}></input>
+            </td>
+            <td>
+              <input data-format="yyyy-MM-dd" type="text" name="end_date" value={{today}}></input>
+            </td>
+          </tr>
           </table>
           <p><input type="submit" value="Submit"></p>
           </form>
@@ -111,6 +90,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(function() {
         $('#datetimepicker4').datetimepicker({
